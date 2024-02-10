@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>숫자 맞추기 게임!</h1>
-    <div id="result-area">결과 값이 이곳에 출력됩니다!</div>
-    <div id="chance-area">남은 기회: 10번</div>
-    <input type="number" id="user-input" />
-    <button id="play-button">Go!</button>
-    <button id="reset-button">Reset</button>
+    <div class="container">
+        <h1 class="text-center">Guessing Numbers</h1>
+        <div id="chance-area" class="text-center">남은 기회: 10번</div>
+        <div class="image-area">
+            <img src="images/questionmark.png" class="img-fluid" id="image">
+        </div>
+        <div class="input-area">
+            <input type="number" id="user-input" class="input-group"/>
+            <button id="play-button" class="btn btn-outline-dark">Go!</button>
+            <button id="reset-button" class="btn btn-outline-dark">Reset</button>    
+        </div>
+        <h3 id="result-area" class="text-center">결과 값이 이곳에 출력됩니다!</h3>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>

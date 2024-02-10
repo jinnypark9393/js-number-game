@@ -17,6 +17,7 @@ let chance = 10 // 기회 횟수 설정
 let gameOver = false;
 let chanceArea = document.getElementById("chance-area")
 let history = [] // 과거에 입력한 값들의 모음
+let image = document.getElementById("image")
 
 playButton.addEventListener("click", play) // click 이벤트 발생 시 play 함수 실행
 resetButton.addEventListener("click", reset)
@@ -55,11 +56,14 @@ function play() {
 
     if (userValue < computerNum) { // 입력값이 랜덤번호보다 작은 경우
         resultArea.textContent = "Up!" // result-area의 텍스트를 "Up!"으로 변경
+        image.src = "./images/incorrect-icon.png" // 오답 시 이미지 변경
     } else if (userValue > computerNum) {
         resultArea.textContent = "Down!"
+        image.src = "./images/incorrect-icon.png" // 오답 시 이미지 변경
     } else if (userValue == computerNum) {
         resultArea.textContent = "정답!"
         gameOver = true
+        image.src = "./images/correct-icon.png" // 정답 시 이미지 변경
     }
 
     history.push(userValue) // 입력한 값 history 배열에 저장
@@ -89,6 +93,8 @@ function reset() {
     chanceArea.textContent = `남은 기회: ${chance}번`
     // Go 버튼 재활성화
     playButton.disabled = false
+    // 아이콘 이미지 초기화
+    image.src = "./images/questionmark.png"
 }
 
 pickRandomNum();

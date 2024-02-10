@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-image: url("images/numbergame-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.container div, h3 {
+    padding: 0.5em;
+}
+
+.input-area {
+    display: flex;
+}
+
+#chance-area {
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.image-area {
+    display: flex;
+    justify-content: center;
+}
